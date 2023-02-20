@@ -1,6 +1,7 @@
 part of 'counter_cubit.dart';
 
-@immutable
-abstract class CounterState {}
-
-class CounterInitial extends CounterState {}
+@freezed
+class CounterState with _$CounterState {
+  const factory CounterState.initial() = _Initial;
+  const factory CounterState.count(int number) = _Count;
+}

@@ -13,9 +13,9 @@ class CounterView extends StatelessWidget {
       appBar: AppBar(title: const Text('Counter Cubit')),
       body: Center(
         child: BlocBuilder<CounterCubit, int>(
-          builder: (context, state) {
+          builder: (context, count) {
             return Text(
-              '$state',
+              '$count',
               style: Theme.of(context).textTheme.headlineMedium,
             );
           },
